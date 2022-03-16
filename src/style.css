@@ -1,0 +1,46 @@
+h1,
+p {
+  font-family: Lato;
+}
+.cont {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  background-color: whitesmoke;
+  height: 100px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.option-cont {
+  justify-content: center;
+  align-items: center;
+}
+.header-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-left: 1300px;
+}
+.content-btn {
+  display: flex;
+  align-items: center;
+}
+.options {
+  padding: 20px;
+  margin: 5px;
+}
+#a:hover {
+  text-decoration: none;
+  background-color: whitesmoke;
+  color: black;
+}
+#header {
+  background-color: white;
+  box-shadow: none;
+}
