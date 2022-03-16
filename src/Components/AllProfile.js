@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import { AppBar, Button, CardMedia, Toolbar, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { USER_LOGOUT } from "../redux/types/authTypes";
+import { LOGOUT_SUCCESS } from "../Redux/Type/logintype";
 
 const AllProfile = () => {
   const [users, setUsers] = useState([]);
@@ -27,7 +27,7 @@ const AllProfile = () => {
 
   const onLogout = (evt) => {
     localStorage.removeItem("authToken");
-    dispatch({ type: USER_LOGOUT });
+    dispatch({ type: LOGOUT_SUCCESS });
     navigate("/login");
   };
 

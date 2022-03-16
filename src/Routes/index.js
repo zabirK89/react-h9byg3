@@ -8,7 +8,6 @@ import {
   Route,
   BrowserRouter,
   Routes,
-  Outlet,
 } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 
@@ -23,7 +22,7 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/profile"
           element={
             <ProtectedRoute>
               <Myprofile />
