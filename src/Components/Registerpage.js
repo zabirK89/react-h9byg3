@@ -113,7 +113,7 @@ export default function header() {
                     Register
                   </Button>
                   <Link
-                    to="/"
+                    to="/login"
                     style={{ textDecoration: 'none', margin: '15px' }}
                   >
                     Login page
