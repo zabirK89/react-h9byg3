@@ -21,9 +21,9 @@ export const userLogin = (body) => async (dispatch) => {
   }
 };
 
-// export const logout = () => ({
-//   type: LOGOUT_SUCCESS,
-// });
+export const logout = () => ({
+  type: LOGOUT_SUCCESS,
+});
 
 export const RegisterLogin = (body, navigate) => async (dispatch) => {
   try {

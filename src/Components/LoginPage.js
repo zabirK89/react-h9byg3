@@ -24,7 +24,9 @@ export default function header() {
     password: 'cityslicka',
   };
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    dispatch(logout());
+  }, []);
   const onSubmit = async (values) => {
     try {
       const { userId, password } = values;
