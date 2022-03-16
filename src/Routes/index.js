@@ -1,7 +1,8 @@
 import { useSelector } from 'react-redux';
 import React from 'react';
-import Registerpage from "../Components/Registerpage"
-import Myprofile from "../Components/Myprofile"
+import Registerpage from '../Components/Registerpage';
+import Myprofile from '../Components/Myprofile';
+import AllProfile from "../Components/AllProfile"
 import {
   Redirect,
   Route,
@@ -18,17 +19,20 @@ const ProtectedRoute = ({ children }) => {
   return token ? children : <Navigate to="/login" />;
 };
 function AppRoutes() {
- 
-  
-
-  // const { path } = Outlet();
-  // const location = useLocation();
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<ProtectedRoute><Myprofile /></ProtectedRoute>}></Route>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Myprofile />
+            </ProtectedRoute>
+          }
+        ></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<Registerpage />}></Route>
+        <Route path="/allprofile" element={<AllProfile />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -10,9 +10,8 @@ import { getProfile } from '../Redux/Action/Loginaction';
 export default function ActionAreaCard() {
   const id = useSelector((state) => state.auth.id) || 1;
   console.log('id===', id);
-  // const { token: token } = store.getState();
-  // console.log('check=======>', store.getState());
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.users);
   useEffect(() => {
     async function _GET_PROFILE() {
       try {
