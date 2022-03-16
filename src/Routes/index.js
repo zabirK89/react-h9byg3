@@ -2,13 +2,8 @@ import { useSelector } from 'react-redux';
 import React from 'react';
 import Registerpage from '../Components/Registerpage';
 import Myprofile from '../Components/Myprofile';
-import AllProfile from "../Components/AllProfile"
-import {
-  Redirect,
-  Route,
-  BrowserRouter,
-  Routes,
-} from 'react-router-dom';
+import AllProfile from '../Components/AllProfile';
+import { Redirect, Route, BrowserRouter, Routes } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 
 import LoginPage from '../Components/LoginPage';
@@ -30,8 +25,22 @@ function AppRoutes() {
           }
         ></Route>
         <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/register" element={<Registerpage />}></Route>
-        <Route path="/allprofile" element={<AllProfile />}></Route>
+        <Route
+          path="/register"
+          element={
+            <ProtectedRoute>
+              <Registerpage />{' '}
+            </ProtectedRoute>
+          }
+        ></Route>
+        <Route
+          path="/allprofile"
+          element={
+            <ProtectedRoute>
+              <AllProfile />{' '}
+            </ProtectedRoute>
+          }
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
