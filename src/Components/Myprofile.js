@@ -17,7 +17,7 @@ export default function ActionAreaCard() {
     async function _GET_PROFILE() {
       try {
         const data = await dispatch(getProfile(id));
-        setprofile(data)
+        setprofile(data);
         // console.log("data==>",data);
       } catch (error) {
         console.log(error);
@@ -33,16 +33,15 @@ export default function ActionAreaCard() {
             <CardMedia
               component="img"
               height="140"
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={profile.data.avatar}
               alt="green iguana"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                {console.log(profile.data.id)}
+                {profile.data.first_name}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                {profile.data.email}
               </Typography>
             </CardContent>
           </CardActionArea>
