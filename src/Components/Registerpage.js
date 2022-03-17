@@ -10,7 +10,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Box } from '@mui/material';
 import Divider from '@mui/material/Divider';
 import * as yup from 'yup';
-import { RegisterLogin, logout } from '../Redux/Action/Loginaction';
+import { RegisterLogin } from '../Redux/Action/Loginaction';
 
 const validationSchema = yup.object().shape({
   userId: yup.string().required('Email is required'),
