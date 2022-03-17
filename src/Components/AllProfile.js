@@ -26,7 +26,7 @@ const AllProfile = () => {
   }, []);
 
   const onLogout = (evt) => {
-    localStorage.removeItem("auth");
+    localStorage.clear();
     dispatch({ type: LOGOUT_SUCCESS });
     navigate("/login");
   };

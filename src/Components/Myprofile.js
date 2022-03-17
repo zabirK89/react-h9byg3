@@ -30,7 +30,7 @@ export default function ActionAreaCard() {
     _GET_PROFILE();
   }, []);
   const onLogout = (evt) => {
-    localStorage.removeItem("authToken");
+    localStorage.clear();
     dispatch({ type: LOGOUT_SUCCESS });
     navigate("/login");
   };
