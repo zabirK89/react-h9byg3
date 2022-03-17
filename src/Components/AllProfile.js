@@ -54,6 +54,7 @@ const AllProfile = () => {
           return (
             <>
               <Grid item sm={6} xs={12} key={user.email}>
+              <h3>{user.first_name}</h3>
                 <Typography>{user.email}</Typography>
                 <CardMedia
                   component="img"
@@ -61,6 +62,7 @@ const AllProfile = () => {
                   sx={{ width: 150, mb: 4 }}
                   alt="Paella dish"
                 />
+               
               </Grid>
             </>
           );
