@@ -12,7 +12,7 @@ import { LOGOUT_SUCCESS } from "../Redux/Type/logintype";
 import { AppBar, Button, CardMedia, Toolbar, Typography } from "@mui/material";
 export default function ActionAreaCard() {
   const id = useSelector((state) => state.auth.id) || 1;
-  console.log('id===', id);
+  // console.log('id===', id);
   const dispatch = useDispatch();
   const [profile, setprofile] = useState({});
   const users = useSelector((state) => state.users);

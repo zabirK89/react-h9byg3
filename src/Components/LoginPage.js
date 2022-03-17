@@ -33,8 +33,7 @@ export default function header() {
       const reqBody = { email: userId, password };
       await dispatch(userLogin(reqBody, navigate));
       navigate('/allprofile');
-      // setSubmitting(false);
-      console.log(reqBody);
+      
     } catch (error) {
       // setSubmitting(false);
       console.error(error);

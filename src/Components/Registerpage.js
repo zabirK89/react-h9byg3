@@ -32,7 +32,7 @@ export default function header() {
       dispatch(RegisterLogin(reqBody, navigate));
 
       // setSubmitting(false);
-      console.log(reqBody);
+      // console.log(reqBody);
     } catch (error) {
       // setSubmitting(false);
       console.error(error);

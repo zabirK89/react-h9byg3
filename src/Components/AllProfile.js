@@ -14,7 +14,7 @@ const AllProfile = () => {
     try {
       const response = await fetch("https://reqres.in/api/users");
       const result = await response.json();
-      console.log(result.data);
+      // console.log(result.data);
       setUsers(result.data || []);
     } catch (error) {
       throw new Error(error);
