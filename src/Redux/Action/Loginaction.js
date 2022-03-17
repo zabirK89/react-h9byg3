@@ -1,7 +1,5 @@
 import { Fetching_Api } from '../middlewares';
 import { LOGIN_SUCCESS, LOGOUT_SUCCESS } from '../Type/logintype';
-// import {useNavigate} from "react-router"
-// let navigate =useNavigate()
 
 export const userLogin = (body) => async (dispatch) => {
   try {
@@ -25,7 +23,7 @@ export const logout = () => ({
   type: LOGOUT_SUCCESS,
 });
 
-export const RegisterLogin = (body, navigate) => async (dispatch) => {
+export const RegisterLogin = (body) => async (dispatch) => {
   try {
     const data = await dispatch({
       type: Fetching_Api,
@@ -36,7 +34,7 @@ export const RegisterLogin = (body, navigate) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       body: { ...data },
     });
-    // navigate('/admin');
+
     return data;
   } catch (error) {
     console.log(error);
@@ -49,12 +47,6 @@ export const getProfile = (id) => async (dispatch) => {
       type: Fetching_Api,
       [Fetching_Api]: { url: `/users/${id}`, method: 'GET' },
     });
-    console.log('datat===', data);
-    // dispatch({
-    //   type: LOGIN_SUCCESS,
-    //   body: { ...data },
-    // });
-
     return data;
   } catch (error) {
     console.log(error);
